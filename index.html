@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+		<style>
+		
+			*{
+				
+				border: 0;
+				margin: 0;
+				padding: 0;
+				outline: none;
+			}
+			.header{
+				min-height: 50px;
+				background: darkgray;
+			
+				border-radius: 5px; 
+				padding: 5px;
+				margin: 5px;
+			}
+			.main{
+				display: flex; 
+				flex-direction: row; 
+			}
+			.main nav{
+				min-height: 500px;
+				
+				border-radius: 5px;
+				padding: 5px;
+				margin: 5px;
+				background:palegreen;
+				order: 2; 
+				flex: 1; 
+			}
+			.main article{
+				min-height: 500px;
+			
+				border-radius: 5px;
+				padding: 5px;
+				margin: 5px;
+				background:bisque;
+				order: 1;
+				flex: 2;
+			}
+			.main aside{
+				min-height: 500px;
+			
+				border-radius: 5px;
+				padding: 5px;
+				margin: 5px;
+				background:gold;
+				order: 3;
+				flex: 3;
+			}
+			.footer{
+				min-height: 50px;
+		
+				background-color:paleturquoise;
+				border-radius: 5px;
+				padding: 5px;
+				margin: 5px;
+			}
+			@media only screen and (max-width: 480px)  {
+				.main{
+					flex-direction:column;
+				}
+				.main>.nav,.main>.article,.main>aside{
+					order: 0;
+				}
+				.main>.article,.main>aside
+				{
+					max-height: 50px;
+					min-height: 50px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header class="header">
+			<input type="checkbox" name="" id="togglebox" value="" />
+			<ul>
+				<li>首页</li>
+				<li>全球问题</li>
+				<li>很仔细</li>
+				<li>是GV地方</li>
+				<li>发鬼地方</li>
+			</ul>
+			<label class="menu"  for="togglebox"><img src="img/menu.png"/></label>
+		</header>
+		
+		<div class="main">
+			<nav class="nav">
+				nav
+			</nav>
+			<article class="article">
+				article
+			</article>
+			<aside class="aside">
+				aside
+			</aside>
+		</div>
+		
+		<footer class="footer">
+			footer
+		</footer>
+	</body>
+</html>
